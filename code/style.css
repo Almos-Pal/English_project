@@ -1,0 +1,80 @@
+
+bal oldal változo mint barmi prog nyelvben jobb oldalt az értéke, azért jo mert igy nem kell 
+:root{
+    --light-font: #202731;
+    --light-bg-blue: #9FD8F7;
+    --light-bg-black: #dff1ff;
+    --light-bg-white: #e8e9ea;
+
+
+    --dark-font: #ffffff;
+    --dark-bg-blue: #001220;
+    --dark-bg-black: #2072ED;
+    --dark-bg-grey: --light-font;
+
+    --font-family:  'Prompt', sans-serif;
+}
+
+body {
+    background: #202731 !important;
+    font-family: 'Prompt', sans-serif;
+}
+
+.main {
+    margin: auto;
+    width: 30%;
+    text-align: center;
+    margin-top: 20%;
+}
+
+#en {
+    width: max-content;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+#hu {
+    
+    width: max-content;
+    margin: auto;
+}
+
+
+.custom-shape-divider-top-1677013163 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1677013163 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+}
+
+.custom-shape-divider-top-1677013163 .shape-fill {
+    fill: #000;
+}
+
+
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .layer1 {
+    background-image: url('../images/wave2.svg');
+  }
+  .layer2 {
+    background-image: url('../images/wave1.svg');
+  }
+
+  .flip {
+    transform: rotate(180deg);
+  }
