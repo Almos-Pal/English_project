@@ -6,25 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Word</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;900&display=swap" rel="stylesheet" />
+
+ 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  
 
 
     <div class="spacer layer1"></div>
-    
+
     <div class="main">
-        <h1>Lol</h1>
-        <input id="hu" type="text" class="form-control" placeholder="Hungarian" aria-label="Hungarian" >
-        <input id="en" type="text" class="form-control" placeholder="English" aria-label="English" >
-        <br>
-        <button id="add_words" class="btn btn-primary rounded-pill border border-light">Add Word</button>
+        <h1>Hungarian to English translator </h1>
+        <input type="text" id="user" placeholder="Your name">
+        
+        <section id="input-box">
+            <!-- <section class="labels">
+                <input class="hu" type="text" placeholder="Hungarian" class="input-group-text" aria-label="Hungarian">
+                <input class="en" type="text" placeholder="English" class="input-group-text" aria-label="English">
+                <button class="button_plus" style="visibility: hidden;"><i class="fa-solid fa-plus" ></i></button>
+                <button class="button_del" ><i class="fa-solid fa-trash"></i></button>
+            </section> -->
+            <section class="labels">
+                <input class="hu" type="text" placeholder="Hungarian">
+                <input class="en" type="text" placeholder="English">
+                <button class="button_plus"onclick="AddRow()"><i class="fa-solid fa-plus"></i></button>
+                <button class="button_del" onclick="DeleteRow(this)"><i class="fa-solid fa-trash" ></i></button>
+            </section>
+        </section>
+
+        
+        <button id="submit_btn" >Add Word</button>
     </div>
     <div class="spacer layer1 flip"></div>
     
+    <div class="alert" style="display: visible;">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <p class="alerttext"></p>
+    </div>
+
     <script src="NewWord.js"></script>
 </body>
 

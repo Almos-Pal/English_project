@@ -1,5 +1,7 @@
+body {
+    position: relative;
+}
 
-bal oldal változo mint barmi prog nyelvben jobb oldalt az értéke, azért jo mert igy nem kell 
 :root{
     --light-font: #202731;
     --light-bg-blue: #9FD8F7;
@@ -12,51 +14,100 @@ bal oldal változo mint barmi prog nyelvben jobb oldalt az értéke, azért jo m
     --dark-bg-black: #2072ED;
     --dark-bg-grey: --light-font;
 
+    --btn-green: #45F09E;
     --font-family:  'Prompt', sans-serif;
 }
 
 body {
-    background: #202731 !important;
-    font-family: 'Prompt', sans-serif;
+    background: var(--light-font) !important;
+    color: var(--dark-font);
+    font-family: var(--font-family) !important;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 .main {
     margin: auto;
     width: 30%;
     text-align: center;
-    margin-top: 20%;
+}
+.labels{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+button{
+    border-radius: 10rem;
+    width: 10rem;
+    height: 2rem;
+    border: none;
+
+}
+.en{
+    margin:0rem 1rem;
 }
 
-#en {
+#add_words{
+    margin: 1rem;
+}
+
+#input-box {
+    margin-left: 4.8rem;
+}
+.button_del {
+    width: 2.2rem;
+    height: 2.2rem;
+    background: var(--dark-bg-blue);
+    color: var(--dark-font) ;
+    font-weight: bolder;
+    cursor: pointer;
+  
+  
+  }
+.button_plus {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-right: 0.5rem;
+    background: var(--btn-green);
+    color: var(--dark-font) ;
+    font-weight: bolder;
+    cursor: pointer;
+  
+  
+  }
+  
+#submit_btn{
+    background: var(--dark-bg-grey);
+    border: 1px solid var(--dark-font);
+    width: 10rem;
+    margin: 1rem;
+    height: 2.4rem;
+    padding: 0.2rem;
+    font-size: 1.1rem;
+    color: var(--dark-font);
+}
+  
+  .button_plus:hover,.button_del:hover,#submit_btn:hover {
+    background-color: var(--dark-bg-black);
+    border: none;
+    transition: 0.2s;
+  }
+
+#user{
+    margin-bottom: 1rem;
+
+}
+
+.en, .hu ,#user{
     width: max-content;
-    margin: auto;
-    margin-bottom: 2%;
-}
-
-#hu {
+    text-align: center;
+    border-radius: 10rem;
+    height: 2rem;
+    border: 0.1rem solid var(--dark-bg-blue);
+    font-family: var(--font-family);
+    color: var(--dark-bg-blue);
     
-    width: max-content;
-    margin: auto;
-}
-
-
-.custom-shape-divider-top-1677013163 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-top-1677013163 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-}
-
-.custom-shape-divider-top-1677013163 .shape-fill {
-    fill: #000;
 }
 
 
@@ -66,15 +117,39 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-  }
+}
 
-  .layer1 {
+.layer1 {
     background-image: url('../images/wave2.svg');
-  }
-  .layer2 {
+}
+.layer2 {
     background-image: url('../images/wave1.svg');
-  }
+}
 
-  .flip {
+.flip {
     transform: rotate(180deg);
-  }
+}
+
+
+.alert {
+    padding: 1.2rem;
+    background-color: #ffffff; 
+    color: white;
+    width: 20%;
+    margin: auto;
+    z-index: 1;
+    position: absolute;
+    left: 39%;
+    top: 50%;
+    
+}
+.closebtn {
+    margin-left: 1rem;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
